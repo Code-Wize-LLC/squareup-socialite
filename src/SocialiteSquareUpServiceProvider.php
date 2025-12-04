@@ -15,7 +15,7 @@ class SocialiteSquareUpServiceProvider extends ServiceProvider
   public function boot()
   {
     Socialite::extend('squareup', function ($app) {
-      $config = $app['config']['services.squareup'];
+      $config = $app['config']['squareup_oauth'];
 
       return Socialite::buildProvider(SocialiteSquareUpProvider::class, $config);
     });
