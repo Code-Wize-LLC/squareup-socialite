@@ -3,6 +3,7 @@
     "description": "Allows users to login with their Square.com account.",
     "license": "MIT",
     "minimum-stability": "beta",
+    "version": "0.8",
     "require": {
         "laravel/socialite": "^5.23",
         "square/square": "^43.2"
