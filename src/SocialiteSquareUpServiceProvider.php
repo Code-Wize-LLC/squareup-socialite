@@ -17,6 +17,15 @@ class SocialiteSquareUpServiceProvider extends ServiceProvider
     Socialite::extend('squareup', function ($app) {
       $config = $app['config']['squareup_oauth'];
 
+      // Publish config
+      $this->publishes([
+          __DIR__.'/../config/squareup.php' => config_path('squareup.php'),
+      ], 'squareup-config');
+
+      $this->publishes([
+          __DIR__.'/SocialiteSquareUpServiceProvider.php' => app_path('Providers/SocialiteSquareUpServiceProvider.php'),
+      ], 'squareup-provider');
+
       return Socialite::buildProvider(SocialiteSquareUpProvider::class, $config);
     });
   }
