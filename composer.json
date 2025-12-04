@@ -17,5 +17,12 @@
             "name": "Elvis Blanco Gonzalez",
             "email": "support@codewize.co"
         }
-    ]
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codewize\\SquareupSocialite\\SocialiteSquareUpServiceProvider"
+            ]
+        }
+    }
 }
